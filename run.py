@@ -66,6 +66,6 @@ def run(cfg, data_set_type):
 if __name__ == '__main__':
     with open('cfg.yaml', 'r') as f:
         cfg = EasyDict(yaml.safe_load(f))
-    #run(cfg=cfg, data_set_type='original')
-    run(cfg=cfg, data_set_type='features')
+    for data_set_type in cfg.datasets.keys():
+        run(cfg=cfg, data_set_type=data_set_type)
 
