@@ -1,0 +1,42 @@
+datasets:
+  original:
+    - mnist
+    - fashion_mnist
+    - cifar
+  features:
+    - mnist-features
+    - fashion_mnist-features
+    - cifar-features
+feature_extractor: mobilenetv3_rw
+feature_shape:
+  - 40
+  - 8
+  - 8
+image_shape:
+  - 1
+  - 32
+  - 32
+train_params:
+  use_saved_model: true
+  train_batch_size: 32
+  valid_batch_size: 64
+  num_workers: 2
+  num_epochs: 15
+  train_val_ratio: 0.8
+metrics:
+  Likelihood: {}
+  Typicality:
+      batch_size: 32
+models:
+  RealNVP:
+    num_coupling: 2
+    n_scales: 3
+    input_shape:
+      - 1
+      - 32
+      - 32
+  VAE:
+    in_channels: 1
+    latent_dim: 32
+debug:
+  out_dir: "results"

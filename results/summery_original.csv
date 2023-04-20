@@ -1,0 +1,13 @@
+Model,Dataset,Metric,ROC_AUC
+RealNVP,mnist,Likelihood,0.999567185
+RealNVP,mnist,Typicality,1.0
+RealNVP,fashion_mnist,Likelihood,0.52827925
+RealNVP,fashion_mnist,Typicality,1.0
+RealNVP,cifar,Likelihood,0.0352997575
+RealNVP,cifar,Typicality,1.0
+VAE,mnist,Likelihood,0.999141845
+VAE,mnist,Typicality,1.0
+VAE,fashion_mnist,Likelihood,0.6486277025
+VAE,fashion_mnist,Typicality,0.998618302103879
+VAE,cifar,Likelihood,0.9935842175
+VAE,cifar,Typicality,0.9967948717948718

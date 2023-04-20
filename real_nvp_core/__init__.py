@@ -1,0 +1,2 @@
+from real_nvp_core.coupling_layer import CheckerBoardCoupling, ChannelWiseCoupling
+

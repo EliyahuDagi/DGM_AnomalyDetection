@@ -1,0 +1,3 @@
+Model,Dataset,Metric,ROC_AUC
+RealNVP,mnist-features,Likelihood,0.991349835
+RealNVP,mnist-features,Typicality,1.0
