@@ -11,7 +11,7 @@ class LikelihoodMetric(Metric):
         self.model = None
         return
 
-    def prepare(self, model: GenerativeModel, train_set: Dataset, train_pad: int):
+    def prepare(self, model: GenerativeModel, train_set: Dataset):
         self.model = model
 
     def predict_anomaly_score(self, data):
