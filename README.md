@@ -30,10 +30,10 @@ set it to false if you want to force training
 
 
 ## Getting Started
-1. Installation process
-   * git clone https://github.com/EliyahuDagi/DGM_AnomalyDetection.git
-2. Software dependencies
-   * pip install -r requirements.txt
+1. Installation process\
+   git clone:  https://github.com/EliyahuDagi/DGM_AnomalyDetection.git
+2. Software dependencies\
+   pip install -r requirements.txt
 3. Run: run.py
 
 
