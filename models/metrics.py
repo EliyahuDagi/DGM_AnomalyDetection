@@ -15,6 +15,7 @@ class LikelihoodMetric(Metric):
         self.model = model
 
     def predict_anomaly_score(self, data):
+        # use the ELBO as approximation for the likelihood
         return self.model.likelihood(data).tolist()
 
 
@@ -26,8 +27,9 @@ class TypicalityMetric(Metric):
 
     def prepare(self, model: GenerativeModel, train_set: Dataset):
         self.model = model
-        # estimate sample entropy by:
+        # estimate entropy by re-substitution estimator:
         # -1 / m * sum(log_p)
+        # using the training data as described https://arxiv.org/pdf/1906.02994.pdf eq. 5
         count_samples = 0
         sum_log_p = 0
         train_loader = DataLoader(train_set, batch_size=16, shuffle=False, num_workers=0)
