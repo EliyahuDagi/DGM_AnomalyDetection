@@ -3,6 +3,7 @@
 * Purpose
 * Project structure
 * Classes and Interfaces
+* Important notes
 * Getting Started
 
 ## Purpose
@@ -22,10 +23,11 @@ results\ - output directory saved model, images samples and graphs.
 You should run: run.py to use this project.\
 run wil use the cfg.yaml to know which model, metric and dataset to load.\
 It will run twice once for original dataset and after that for features dataset.\
-** Each dataset will be downloaded into data/ directory\
-** Notice that features dataset is computed one time and saved on the disk, so it need some space.\
+## Important Notes
+* Each dataset will be downloaded into data/ directory\
+* Notice that features dataset is computed one time and saved on the disk, so it need some space.\
    if you want to ignore it remove it from cfg.yaml "datasets".\
-** if cfg['train_params']['use_saved_model'] is True model that exist in result will not be trained,
+* if cfg['train_params']['use_saved_model'] is True model that exist in result will not be trained,
 set it to false if you want to force training
 
 
